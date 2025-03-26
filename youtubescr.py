@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 from googleapiclient.discovery import build
 
-API_KEY = "AIzaSyBW1IeX2PoLEvgWvz1JLVM9LlFoZQFHvjw"
+API_KEY = st.secrets["API_KEY"]
 
 def search_videos(query, api_key=API_KEY, max_results=50, published_after=None, published_before=None):
     youtube = build("youtube", "v3", developerKey=api_key)
