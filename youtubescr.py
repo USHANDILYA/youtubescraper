@@ -72,7 +72,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from wordcloud import WordCloud
 from googleapiclient.discovery import build
-from io import BytesIO
+#from io import BytesIO
 
 API_KEY = st.secrets["API_KEY"]
 
@@ -175,12 +175,12 @@ def main():
             
             # Download options
             csv = df.to_csv(index=False).encode("utf-8")
-            excel_buffer = BytesIO()
-            df.to_excel(excel_buffer, index=False, engine="openpyxl")
-            excel_buffer.seek(0)
+            # excel_buffer = BytesIO()
+            # df.to_excel(excel_buffer, index=False, engine="openpyxl")
+            # excel_buffer.seek(0)
             
             st.download_button("Download CSV", csv, "youtube_videos.csv", "text/csv")
-            st.download_button("Download Excel", excel_buffer, "youtube_videos.xlsx", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")
+            #st.download_button("Download Excel", excel_buffer, "youtube_videos.xlsx", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")
         else:
             st.write("No videos found.")
 
