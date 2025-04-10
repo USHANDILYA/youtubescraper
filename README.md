@@ -42,14 +42,14 @@ git clone https://github.com/USHANDILYA/youtubescraper.git
 cd youtube-video-scraper
 ### 2. Install Python Packages
 Make sure Python 3.7+ is installed. Then run:
-```bash
+```
 ```bash
 pip install -r requirements.txt
 Or install manually:
-
+```
 ```bash
 pip install streamlit pandas matplotlib wordcloud google-api-python-client
-
+```
 ### 3. Get a YouTube API Key
 - Visit Google Cloud Console
 - Create a new project
@@ -65,7 +65,7 @@ pip install streamlit pandas matplotlib wordcloud google-api-python-client
 ### 5. Run the Streamlit App
 ```bash
 streamlit run app.py
-
+```
 ## 🖥️ Usage Flow (Step-by-Step)
 
 ### Step 1: Search Videos
